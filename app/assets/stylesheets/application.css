@@ -18,3 +18,12 @@ body { padding-top: 60px; }
 footer { margin-top: 100px; }
 table, td, th { vertical-align: middle; border: none; }
 th { border-bottom: 1px solid #DDD; }
+
+.likes-link {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.likes-number {
+    font-size: 1rem;
+}
