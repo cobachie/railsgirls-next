@@ -1,6 +1,6 @@
 import consumer from "./consumer"
 
-const timelineChannel = consumer.subscriptions.create("TimelineChannel", {
+export const timelineChannel = consumer.subscriptions.create("TimelineChannel", {
   connected() {
     // Called when the subscription is ready for use on the server
   },
@@ -19,11 +19,11 @@ const timelineChannel = consumer.subscriptions.create("TimelineChannel", {
   }
 });
 
-document.addEventListener("turbolinks:load", () => {
-  const links = document.querySelectorAll('.likes-link');
-  links.forEach(link => {
-    link.addEventListener('click', e => {
-      timelineChannel.like(e.currentTarget.dataset.id);
-    });
-  })
-})
+// document.addEventListener("turbolinks:load", () => {
+//   const links = document.querySelectorAll('.likes-link');
+//   links.forEach(link => {
+//     link.addEventListener('click', e => {
+//       timelineChannel.like(e.currentTarget.dataset.id);
+//     });
+//   })
+// })
