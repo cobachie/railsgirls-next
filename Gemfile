@@ -63,3 +63,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "carrierwave"
 
 gem "rexml", "~> 3.2"
+
+gem "view_component", require: "view_component/engine"
