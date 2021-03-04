@@ -5,4 +5,11 @@ class IdeaComponent < ViewComponent::Base
     @idea = idea
   end
 
+  def image
+    return if idea.picture.blank?
+
+    image_tag @idea.picture_url, width: '100%'
+  end
+
+  private attr_reader :idea
 end
