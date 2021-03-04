@@ -6,18 +6,7 @@
   <% @ideas.in_groups_of(3) do |group| %>
     <div class="row">
       <% group.compact.each do |idea| %>
-        <div class="col-md-4">
-          <%= image_tag idea.picture_url, width: '100%' if idea.picture.present? %>
-          <div>
-            <%= link_to "#", class: "likes-link", id: "idea-likes-#{idea.id}",
-                        data: { id: idea.id, action: "click->ideas#like" } do %>
-              <i class="far fa-heart"></i>
-            <% end %>
-            <span class="likes-count" id="idea-count-<%= idea.id %>"><%= idea.likes_count %></span>
-          </div>
-          <h4><%= link_to idea.name, idea %></h4>
-          <%= idea.description %>
-        </div>
+        <%= render(IdeaComponent.new(idea: idea)) %>
       <% end %>
     </div>
   <% end %>
