@@ -5,7 +5,8 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(account: params[:account])
     if user && user.authenticate(params[:password])
-      # ログイン成功
+      session[:user_id] = user.id
+      redirect_to ideas_path
     else
       flash[:error] = 'アカウントまたはパスワードが正しくありません。'
       render :new
