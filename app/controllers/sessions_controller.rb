@@ -7,7 +7,8 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       # ログイン成功
     else
-      # ログイン失敗
+      flash[:error] = 'アカウントまたはパスワードが正しくありません。'
+      render :new
     end
   end
 
