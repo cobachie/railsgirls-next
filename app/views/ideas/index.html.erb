@@ -25,4 +25,6 @@
 
 <br>
 
-<%= link_to 'New Idea', new_idea_path %>
+<% if logged_in? %>
+  <%= link_to 'New Idea', new_idea_path %>
+<% end %>
