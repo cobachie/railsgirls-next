@@ -65,3 +65,4 @@ gem "carrierwave"
 gem "rexml", "~> 3.2"
 
 gem "graphql", "~> 1.12"
+gem 'graphiql-rails', group: :development
