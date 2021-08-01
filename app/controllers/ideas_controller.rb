@@ -10,6 +10,17 @@ class IdeasController < ApplicationController
   # GET /ideas/1
   # GET /ideas/1.json
   def show
+    query = <<~GQL
+      {
+        idea(id: #{@idea.id}) {
+          id
+          name
+          createdAt
+          likesCount
+        }
+      }
+    GQL
+    @result_hash = RailsgirlsNextSchema.execute(query)
   end
 
   # GET /ideas/new
