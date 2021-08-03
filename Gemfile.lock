@@ -96,6 +96,9 @@ GEM
       railties
       sprockets-rails
     graphql (1.12.14)
+    graphql-client (0.16.0)
+      activesupport (>= 3.0)
+      graphql (~> 1.8)
     i18n (1.8.9)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.1)
@@ -256,6 +259,7 @@ DEPENDENCIES
   carrierwave
   graphiql-rails
   graphql (~> 1.12)
+  graphql-client (~> 0.16.0)
   jbuilder
   listen
   pg
